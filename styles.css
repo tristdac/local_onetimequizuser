@@ -1,0 +1,198 @@
+/* .modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4); }
+.modal-content { background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; }
+.close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
+.close:hover, .close:focus { color: black; text-decoration: none; cursor: pointer; } */
+
+#page-local-onetimequizuser-ondemand {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#page-local-onetimequizuser-ondemand .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+#page-local-onetimequizuser-ondemand .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 500px; /* Maximum width */
+}
+
+/* The Close Button */
+#page-local-onetimequizuser-ondemand .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#page-local-onetimequizuser-ondemand .close:hover,
+#page-local-onetimequizuser-ondemand .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#page-local-onetimequizuser-ondemand #submitBtn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#page-local-onetimequizuser-ondemand #submitBtn:hover {
+    opacity: 0.8;
+}
+
+#page-local-onetimequizuser-ondemand #quizid {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Add a bit of shadow to the QR code for emphasis */
+#page-local-onetimequizuser-ondemand .qr-code-container {
+    display: block;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, .2); */
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    margin-left: -20px;
+    width: fit-content;
+    text-align: center;
+    font-size: large;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#page-local-onetimequizuser-ondemand .text-container {
+    display: block;
+    margin-bottom: 20px;
+    padding: 30px 20px;
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+}
+
+#page-local-onetimequizuser-ondemand a#manualEntryTrigger {
+    display: inline-block;
+    background: #007bff;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#page-local-onetimequizuser-ondemand a#manualEntryTrigger:hover {
+    background: #0056b3;
+}
+
+#page-local-onetimequizuser-ondemand div#usernavigation {
+    display: none;
+}
+
+#page-local-onetimequizuser-ondemand div#sessionTimer {
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background: #efefef;
+}
+
+#page-local-onetimequizuser-signup .container {
+    width: 100%;
+}
+
+#page-local-onetimequizuser-signup .quiz-info {
+    padding: 50px;
+    vertical-align: top;
+    /* Additional styling as needed */
+}
+
+#page-local-onetimequizuser-signup .form-container {
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    padding: 50px;
+    vertical-align: top;
+}
+
+#page-local-onetimequizuser-signup .primary-navigation, #page-local-onetimequizuser-signup #usernavigation {
+    display: none;
+}
+
+#page-local-onetimequizuser-quiz_summary .quizid {
+    background: #e6ffcf;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px solid #e8e8e8;
+}
+
+#page-local-onetimequizuser-quiz_summary .quizinfo {
+    border: 1px solid #c6c6c6;
+    border-radius: 10px;
+    padding: 50px;
+    vertical-align: top;
+}
+
+#page-local-onetimequizuser-quiz_summary ol li {
+    font-size: x-large;
+    padding: 10px;
+}
+
+#scanSuccessIcon {
+    margin: 20px;
+    background-color: green;
+    color: #fff !important;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.qr-container {
+    position: relative;
+    display: inline-block;
+    padding: 10px    
+}
+
+.qr-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.5),rgba(255, 255, 255, 0.5), rgba(36, 114, 182, 0.5));
+    mix-blend-mode: multiply;
+    border-radius: 10px;
+}
+#pcCount {
+    font-weight: bold;
+    color: green;
+}
